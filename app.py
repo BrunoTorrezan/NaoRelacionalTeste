@@ -6,10 +6,10 @@ app = Flask(__name__)
 def hello_world():
     return render_template('index.html', titulo="Testando Vercel")
 
-@app.route('/2')
-def hello_world2():
-    return render_template('Teste2.html')
-
+@app.route('/cadastro')
+def cadastro():
+    estados = Estados()
+    return render_template('Cadastro.html', titulo ="Cadastro Não Relacional", estados=estados)
 
 if __name__ == '__main__':
     app.run()
