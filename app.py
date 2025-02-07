@@ -1,4 +1,13 @@
-from flask import Flask,render_template
+from flask import Flask,render_template,request,redirect
+import requests
+
+def Estados():
+    listadeestados=[]
+    estados = requests.get("https://servicodados.ibge.gov.br/api/v1/localidades/estados").json()
+    for estado in estados:
+        listadeestados.append(estado['sigla'])
+    listadeestados.sort()
+    return listadeestados
 
 app = Flask(__name__)
 
