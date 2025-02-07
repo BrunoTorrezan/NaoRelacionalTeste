@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/estilo.css">
+    <title>{{ titulo }}</title>
+</head>
+<body>
+<section class="containerexibir">
+  <header><a href="/"><img class="homeimg" src="./static/img/home.png"></a>{{ titulo }}</header>
+</section>
+<div class="containertabela">
+ <table class="tabela">
+  <thead>
+    <tr>
+      <th>Nome Completo</th>
+      <th>Telefone</th>
+      <th>Data de nascimento</th>
+      <th>Gênero</th>
+      <th>Estado</th>
+      <th>Cidade</th>
+      <th>Funções</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for item in dados %}
+    <tr>
+      <td>{{ item['nome'] }}</td>
+      <td>{{ item['telefone'] }}</td>
+      <td>{{ item['DataNascimento'] }}</td>
+      <td>{{ item['Genero'] }}</td>
+      <td>{{ item['Estado'] }}</td>
+      <td>{{ item['Cidade'] }}</td>
+      <td>
+       <a href="/editar/{{ item['doc_id'] }}"><img class='icone' src='/static/img/editar.png'></a>
+       <a href="/excluir/{{ item['doc_id'] }}"><img class='icone' src='/static/img/excluir.png'></a>
+      </td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+</body>
+</html>

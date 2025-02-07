@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/estilo.css">
+    <title>{{ titulo }}</title>
+</head>
+<body>
+<section class="containerexibir">
+  <header><a href="/"><img class="homeimg" src="../static/img/home.png"></a>{{ titulo }}</header>
+</section>
+<section class="container">
+  <form class="form" action=#>
+      <div class="input-box">
+          <label>Nome Completo</label>
+          <input class="topo" name="nome" value=# required placeholder="Digite seu nome completo" type="text">
+      </div>
+      <div class="column">
+          <div class="input-box">
+            <label>Telefone</label>
+            <input required name="telefone" value=# placeholder="Digite seu telefone" type="telephone" onkeyup="mascaraTelefone(this)">
+          </div>
+          <div class="input-box">
+            <label>Data de nascimento</label>
+            <input required name="datanas" value=# placeholder="Digite sua data de nascimento" type="date">
+          </div>
+      </div>
+      <div class="gender-box">
+        <label class="texto">Gênero</label>
+        <div class="gender-option">
+          <div class="gender">
+
+          </div>
+          <div class="gender">
+
+          </div>
+          <div class="gender">
+
+          </div>
+        </div>
+      </div>
+      <div class="input-box address">
+        <label>Endereço</label>
+        <input class="topo" name="endereco" value=# id="endereco" required placeholder="Digite seu endereço" type="text">
+        <div class="column">
+          <div class="select-box">
+            <select name="estado" id="estado">
+
+            </select>
+          </div>
+        <input class='topo' name="cidade" value=# id="cidade" required placeholder="Digite sua cidade" type="text">
+        </div>
+      </div>
+      <button>Alterar</button>
+  </form>
+</section>
+
+
+</body>
+</html>
+ <script type="text/javascript" src ='../static/Mascara.js'></script>
