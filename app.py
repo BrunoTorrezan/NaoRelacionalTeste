@@ -8,12 +8,11 @@ def home():
 
 @app.route('/cadastro')
 def cadastro():
-    return render_template('Cadastro.html', titulo ="Cadastro Não Relacional", estados=estados)
+    return render_template('Cadastro.html', titulo ="Cadastro Não Relacional" )
 
 @app.route('/exibir')
 def exibir():
-    valores = [dict(record, doc_id=record.doc_id) for record in db]
-    return render_template('Exibir.html', titulo ="Exibir", dados=valores)
+    return render_template('Exibir.html', titulo ="Exibir")
 
 
 if __name__ == '__main__':
