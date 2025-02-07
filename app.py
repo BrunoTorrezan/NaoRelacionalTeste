@@ -1,8 +1,5 @@
 from flask import Flask,render_template,request,redirect
-from tinydb import TinyDB
 
-
-db = TinyDB('banco.json')
 app = Flask(__name__)
 
 @app.route('/')
