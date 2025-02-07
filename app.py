@@ -8,7 +8,6 @@ def home():
 
 @app.route('/cadastro')
 def cadastro():
-    estados = Estados()
     return render_template('Cadastro.html', titulo ="Cadastro Não Relacional", estados=estados)
 
 @app.route('/exibir')
